@@ -3,3 +3,4 @@ venv
 *.png
 *.json
 *.pyc
+aws_config.py
