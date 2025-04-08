@@ -1,0 +1,29 @@
+{
+  "username": "nike",
+  "full_name": "Nike",
+  "biography": "You can\u2019t win. So Win.",
+  "verified": true,
+  "followers": 301476483,
+  "following": 226,
+  "profile_url": "https://www.instagram.com/nike",
+  "business_address": "One Bowerman Dr, Beaverton, Oregon 97005",
+  "posts_count": 1570,
+  "avg_likes": 84615.5,
+  "avg_comments": 1336.2,
+  "profile_pic_url": "https://instagram.fagc3-2.fna.fbcdn.net/v/t51.2885-19/476168541_612178675089525_1333583602336081250_n.jpg?stp=dst-jpg_e0_s150x150_tt6&_nc_ht=instagram.fagc3-2.fna.fbcdn.net&_nc_cat=1&_nc_oc=Q6cZ2QHSI-jZWa6_hiuVgbv4SGztSkCOvUCKfv3_oaHjKgAab697d7ZQNdRFoxI1FPb26lU&_nc_ohc=3llbcK0SEk4Q7kNvwE-2ltT&_nc_gid=ge58_vF2TatUzWqQB7iZ9g&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AfGvZ9WDNskEvTu395x8U12oQdeYNpJZWpn8ZZR8lZX03g&oe=67FAE8A3&_nc_sid=8b3546",
+  "engagement_rate": 0.01,
+  "engagement_rate_adjusted": 0.63,
+  "engagement_rate_weighted": 0.01,
+  "fake_follower_percentage": 0.8049995777237487,
+  "influence_score": 100,
+  "network_graph": "https://influenceiq-graphs.s3.amazonaws.com/nike_network_graph.png",
+  "categories": [
+    "GENERAL"
+  ],
+  "analysis_date": "2025-04-08T19:50:59.555285",
+  "original_fake_follower_percentage": 76.61,
+  "commenters_fake_percentage": 0.0,
+  "engagement_by_type": {
+    "unknown": 0.03
+  }
+}

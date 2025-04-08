@@ -1,0 +1,38 @@
+[
+  {
+    "username": "gymtrin",
+    "posts": 567,
+    "following": 715,
+    "followers": 150202,
+    "has_profile_pic": true,
+    "private": false,
+    "follower_following_ratio": 210.07,
+    "bio_length": 103,
+    "username_length": 7,
+    "digits_in_username": 0
+  },
+  {
+    "username": "lisa_ramuschkat",
+    "posts": 522,
+    "following": 1798,
+    "followers": 18432,
+    "has_profile_pic": true,
+    "private": false,
+    "follower_following_ratio": 10.25,
+    "bio_length": 143,
+    "username_length": 15,
+    "digits_in_username": 0
+  },
+  {
+    "username": "camilafarani",
+    "posts": 4527,
+    "following": 897,
+    "followers": 1146198,
+    "has_profile_pic": true,
+    "private": false,
+    "follower_following_ratio": 1277.81,
+    "bio_length": 148,
+    "username_length": 12,
+    "digits_in_username": 0
+  }
+]

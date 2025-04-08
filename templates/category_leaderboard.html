@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfluenceIQ - Category Leaderboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="/">InfluenceIQ</a></div>
+            <div class="nav-links">
+                <a href="/" class="nav-item">Home</a>
+                <a href="/leaderboard/view" class="nav-item">Leaderboard</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h1 id="category-title">Category Leaderboard</h1>
+            <p class="subtitle">Top influencers in this category</p>
+            
+            <div class="sort-controls">
+                <label for="sort-select">Sort by:</label>
+                <select id="sort-select" class="input-field">
+                    <option value="influence_score">Influence Score</option>
+                    <option value="engagement_rate">Engagement Rate</option>
+                    <option value="followers">Followers</option>
+                </select>
+            </div>
+        </section>
+        
+        <section class="leaderboard-section">
+            <div class="leaderboard-container">
+                <table id="leaderboard-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Instagram Username</th>
+                            <th>Influence Score</th>
+                            <th>Engagement Rate</th>
+                            <th>Followers</th>
+                            <th>Date Analyzed</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboard-body">
+                        <tr>
+                            <td colspan="6" class="loading-message">Loading leaderboard data...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sortSelect = document.getElementById('sort-select');
+            const leaderboardBody = document.getElementById('leaderboard-body');
+            const categoryTitle = document.getElementById('category-title');
+            
+            // Get category from URL
+            const pathParts = window.location.pathname.split('/');
+            const category = pathParts[pathParts.length - 1];
+            
+            // Update title
+            fetch('/categories')
+                .then(response => response.json())
+                .then(categories => {
+                    const categoryInfo = categories.find(c => c.id === category) || {name: category};
+                    categoryTitle.textContent = `${categoryInfo.name} Leaderboard`;
+                });
+            
+            function loadLeaderboard(sortBy = 'influence_score') {
+                leaderboardBody.innerHTML = '<tr><td colspan="6" class="loading-message">Loading leaderboard data...</td></tr>';
+                
+                fetch(`/leaderboard?sort_by=${sortBy}&category=${category}&t=${Date.now()}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (!data || data.length === 0) {
+                            leaderboardBody.innerHTML = '<tr><td colspan="6" class="empty-message">No data available for this category.</td></tr>';
+                            return;
+                        }
+                        
+                        leaderboardBody.innerHTML = '';
+                        
+                        data.forEach((entry, index) => {
+                            const row = document.createElement('tr');
+                            row.innerHTML = `
+                                <td>${index + 1}</td>
+                                <td><a href="/?username=${entry.username}&autoanalyze=true" class="username-link">@${entry.username}</a></td>
+                                <td>${typeof entry.influence_score === 'number' ? entry.influence_score.toFixed(2) : 'N/A'}</td>
+                                <td>${typeof entry.engagement_rate === 'number' ? entry.engagement_rate.toFixed(2) : 'N/A'}%</td>
+                                <td>${typeof entry.followers === 'number' ? entry.followers.toLocaleString() : 'N/A'}</td>
+                                <td>${entry.timestamp ? new Date(entry.timestamp).toLocaleDateString() : 'N/A'}</td>
+                            `;
+                            leaderboardBody.appendChild(row);
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error loading leaderboard:', error);
+                        leaderboardBody.innerHTML = `<tr><td colspan="6" class="error-message">Error loading leaderboard data: ${error.message}</td></tr>`;
+                    });
+            }
+            
+            sortSelect.addEventListener('change', () => {
+                loadLeaderboard(sortSelect.value);
+            });
+            
+            // Initial load
+            loadLeaderboard();
+        });
+    </script>
+</body>
+</html>

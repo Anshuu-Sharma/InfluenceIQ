@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfluenceIQ - Measure Real Impact</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="/index/view"><img src="https://placehold.co/30x30/2463EB/FFF?text=IQ" alt="InfluenceIQ Logo"></a>
+            <a href="/index/view"><span>INFLUENCEIQ</span></a>
+        </div>
+        <div class="nav-links">
+            <a href="/leaderboard/view" class="nav-item">Leaderboard</a>
+            <a href="#how-it-works" class="nav-item">How it Works</a>
+            
+        </div>
+    </nav>
+
+    <main class="hero" id="start">
+        <h1>Who Really Matters?</h1>
+        <h2>InfluenceIQ Ranks True Impact, Not Just Hype</h2>
+        <p class="subtitle">
+            Using advanced AI to measure real influence through credibility, longevity,<br>
+            and meaningful engagement.
+        </p>
+
+        <div class="search-container">
+            <input type="text" placeholder="Enter any name or search for an influencer..." id="search">
+            <button class="explore-btn">Analyze →</button>
+        </div>
+
+        <div id="results" class="features"></div>
+         
+        
+        <div id="graph-container" style="text-align: center; margin-top: 20px;">
+            <!-- The graph image will be dynamically inserted here -->
+        </div>
+    </main>
+
+
+    <section class="how-it-works" id="how-it-works">
+        <h2>How InfluenceIQ Works</h2>
+        <p class="section-subtitle">Our advanced system measures true influence across multiple dimensions</p>
+        
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Data Collection</h3>
+                    <p>We analyze public data across multiple platforms to build a comprehensive influence profile.</p>
+                    <ul class="step-details">
+                        <li>Cross-platform engagement metrics</li>
+                        <li>Content performance analysis</li>
+                        <li>Audience interaction patterns</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Network Analysis</h3>
+                    <p>Our AI examines follower authenticity and engagement patterns to detect genuine influence.</p>
+                    <ul class="step-details">
+                        <li>Fake follower detection</li>
+                        <li>Engagement authenticity scoring</li>
+                        <li>Network graph analysis</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Impact Scoring</h3>
+                    <p>We calculate a comprehensive influence score using our proprietary algorithm.</p>
+                    <div class="formula">
+                        <span class="formula-text">Score = (E × W₁) + (R × W₂) + (C × W₃) + (A × W₄)</span>
+                        <ul class="formula-legend">
+                            <li><strong>E</strong>: Engagement Score</li>
+                            <li><strong>R</strong>: Real Follower %</li>
+                            <li><strong>C</strong>: Content Virality</li>
+                            <li><strong>A</strong>: Authority Score</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Real-Time Updates</h3>
+                    <p>Continuous monitoring ensures your influence score stays current and accurate.</p>
+                    <ul class="step-details">
+                        <li>24/7 performance tracking</li>
+                        <li>Trend analysis</li>
+                        <li>Competitive benchmarking</li>
+                    </ul>
+                </div>
+            </div> -->
+        </div>
+    
+        <div class="cta-container">
+            <h3>Ready to Discover True Influence?</h3>
+            <a href="#start"><button class="cta-btn">Get Started Now →</button></a>
+        </div>
+    </section>
+
+    <section class="top-influencers">
+        <div class="container">
+            <h2>Discover Who's Making an Impact</h2>
+            <p>Explore our comprehensive database of influencers across various industries and platforms.</p>
+            
+            <div class="influencer-grid" id="precomputed-influencers">
+                <!-- Cards will be dynamically loaded here -->
+            </div>
+    
+        </div>
+    </section>
+    
+    
+    
+    
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <!-- <li><a href="#">Careers</a></li> -->
+                    <!-- <li><a href="#">Press</a></li>
+                    <li><a href="#">Blog</a></li> -->
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="#">Features</a></li>
+                    <!-- <li><a href="#">API Documentation</a></li> (Future)-->
+                    <li><a href="#">Pricing</a></li>
+                    <!-- <li><a href="#">Enterprise</a></li> -->
+                </ul>
+            </div>
+            <!-- <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Status</a></li>
+                </ul>
+            </div> -->
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                    <!-- <li><a href="#">Ethics Guidelines</a></li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 InfluenceIQ. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">GitHub</a>
+            </div>
+        </div>
+    </footer>
+    <script src="/static/main.js"></script>
+</body>
+</html>
+
+
+
+    

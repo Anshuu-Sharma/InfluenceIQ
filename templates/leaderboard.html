@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Influencer Leaderboard - InfluenceIQ</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/index/view"><img src="https://placehold.co/30x30/2463EB/FFF?text=IQ" alt="InfluenceIQ Logo"></a>
+                <a href="/index/view"><span>INFLUENCEIQ</span></a>
+            </div>
+            <div class="nav-links">
+                <a href="/" class="nav-item">Home</a>
+                <a href="/leaderboard/view" class="nav-item active">Leaderboard</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h1>Instagram Influencer Leaderboard</h1>
+            <p class="subtitle">Discover the most influential Instagram accounts analyzed by our community</p>
+            
+            <div class="category-tabs" id="category-tabs">
+                <a href="/leaderboard/view" class="category-tab active">All Categories</a>
+                <!-- Categories will be loaded here -->
+            </div>
+            
+            <div class="sort-controls">
+                <label for="sort-select">Sort by:</label>
+                <select id="sort-select" class="input-field">
+                    <option value="influence_score">Influence Score</option>
+                    <option value="engagement_rate">Engagement Rate</option>
+                    <option value="followers">Followers</option>
+                </select>
+            </div>
+        </section>
+        
+        <section class="leaderboard-section">
+            <div class="leaderboard-container">
+                <table id="leaderboard-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Instagram Username</th>
+                            <!-- <th>Categories</th> -->
+                            <th>Influence Score</th>
+                            <th>Engagement Rate</th>
+                            <th>Followers</th>
+                            <th>Date Analyzed</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboard-body">
+                        <tr>
+                            <td colspan="6" class="loading-message">Loading leaderboard data...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    
+    <script src="/static/leaderboard.js"></script>
+</body>
+</html>

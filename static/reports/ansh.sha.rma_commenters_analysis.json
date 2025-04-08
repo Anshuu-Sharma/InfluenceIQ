@@ -1,0 +1,38 @@
+[
+  {
+    "username": "_sarthak.sirohi_",
+    "posts": 12,
+    "following": 952,
+    "followers": 616,
+    "has_profile_pic": true,
+    "private": false,
+    "follower_following_ratio": 0.65,
+    "bio_length": 18,
+    "username_length": 16,
+    "digits_in_username": 0
+  },
+  {
+    "username": "bullet_raja4700",
+    "posts": 513,
+    "following": 133,
+    "followers": 960,
+    "has_profile_pic": true,
+    "private": false,
+    "follower_following_ratio": 7.22,
+    "bio_length": 136,
+    "username_length": 15,
+    "digits_in_username": 4
+  },
+  {
+    "username": "its__ur__krish",
+    "posts": 1,
+    "following": 144,
+    "followers": 270,
+    "has_profile_pic": true,
+    "private": false,
+    "follower_following_ratio": 1.88,
+    "bio_length": 143,
+    "username_length": 14,
+    "digits_in_username": 0
+  }
+]
