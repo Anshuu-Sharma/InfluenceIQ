@@ -31,6 +31,9 @@
 ---
 
 ## 📊 Screenshots
+![Screenshot 2025-04-08 at 8 56 18 PM](https://github.com/user-attachments/assets/43b8b893-3ba4-4dd1-a60a-c08b8c055128)
+![Screenshot 2025-04-08 at 8 56 51 PM](https://github.com/user-attachments/assets/4eec0b3f-7a6c-4767-ac01-8131cf1a67c7)
+![Screenshot 2025-04-08 at 8 57 12 PM](https://github.com/user-attachments/assets/ef2caa83-5e29-4450-a6a0-aac0fa69c301)
 
 
   
