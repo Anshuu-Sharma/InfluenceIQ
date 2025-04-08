@@ -165,6 +165,7 @@ def analyze_instagram_influence(username, post_limit=10, follower_limit=100):
         results["engagement_by_type"] = {
             k: round(v, 2) for k, v in engagement_result["engagement_by_type"].items()
         }
+    if(results["fake_follower_percentage"] < 0): results["fake_follower_percentage"] = 0
     if profile_data["followers"] >= 10000000:  
         results["fake_follower_percentage"] = random.uniform(0.1, 0.9) 
     # Save results to file
