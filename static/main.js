@@ -133,12 +133,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="profile-card">
                     <!-- Profile Header -->
                     <div class="profile-header">
-                        <img src="${data.profile_picture || `https://ui-avatars.com/api/?name=${data.username}&background=random`}" alt="Profile Picture" class="profile-picture">
+                        <img src="/proxy-image?url=${encodeURIComponent(data.profile_pic_url) || `https://ui-avatars.com/api/?name=${data.username}&background=random`}" alt="Profile Picture" class="profile-picture" >
                         <div class="profile-info">
                             <h2 class="username">${data.username}</h2>
                             <p class="rank">🎤 ${data.categories?.[0] || 'GENERAL'} </p>
                         </div>
                     </div>
+
                 
                     <!-- Performance Metrics -->
                     <div class="performance-metrics">

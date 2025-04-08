@@ -11,7 +11,8 @@ import os
 from datetime import datetime
 
 # Initialize the ApifyClient with your Apify API token
-client = ApifyClient("apify_api_EoD8Q088eert4pH5ap3ByQ9v7gxtkN3UEnzv")
+key = "YOUR_APIFY_KEY"
+client = ApifyClient(key)
 
 #fake followers
 from apify_client import ApifyClient
@@ -20,7 +21,7 @@ def get_post_url(username):
     """
     Fetch the URL of one post of the user using Apify Instagram Post Scraper actor.
     """
-    client = ApifyClient(token='apify_api_EoD8Q088eert4pH5ap3ByQ9v7gxtkN3UEnzv')  # Replace with your actual Apify API token
+    client = ApifyClient(token=key)  # Replace with your actual Apify API token
 
     # Input for the Instagram Post Scraper actor
     run_input = {
@@ -60,7 +61,7 @@ def get_commenters(post_url, owner_username, limit=3):
     Fetch usernames of commenters from an Instagram post using Apify Instagram Comment Scraper actor.
     Ensures that the owner of the post is excluded from the results.
     """
-    client = ApifyClient(token='apify_api_EoD8Q088eert4pH5ap3ByQ9v7gxtkN3UEnzv')  # Replace with your actual Apify API token
+    client = ApifyClient(token=key)  # Replace with your actual Apify API token
 
     # Ensure limit is an integer
     limit = int(limit)
@@ -105,7 +106,7 @@ def get_commenters_data(usernames):
     """
     Fetch profile data for multiple usernames using Apify Instagram Profile Scraper actor.
     """
-    client = ApifyClient(token='apify_api_EoD8Q088eert4pH5ap3ByQ9v7gxtkN3UEnzv')  # Replace with your actual Apify API token
+    client = ApifyClient(token=key)  # Replace with your actual Apify API token
 
     # Input for the Instagram Profile Scraper actor
     run_input = {

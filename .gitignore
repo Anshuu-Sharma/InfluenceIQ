@@ -7,3 +7,4 @@ aws_config.py
 *.pyc
 __pycache__/main.cpython-313.pyc
 __pycache__/aws_config.cpython-313.pyc
+*.json

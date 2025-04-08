@@ -4,6 +4,8 @@ import os
 from main import analyze_instagram_influence,analyze_commenters,save_commenter_analysis
 from data_extractor import get_post_url, get_commenters, get_commenters_data
 from db_helpers import get_leaderboard, save_analysis, update_existing_data_with_categories,table, get_precomputed_influencers
+import requests
+from flask import Response
 
 app = Flask(__name__, static_folder='static', static_url_path='/static')
 CORS(app)  # Add CORS support
@@ -38,7 +40,11 @@ def analyze():
         print(f"Backend Error: {str(e)}")
         return jsonify({'error': str(e)}), 500
 
-
+@app.route('/proxy-image')
+def proxy_image():
+    url = request.args.get('url')
+    response = requests.get(url)
+    return Response(response.content, mimetype=response.headers['Content-Type'])
 
 @app.route('/leaderboard')
 def leaderboard_api():
