@@ -115,15 +115,47 @@ Access category-specific leaderboards via `/leaderboard/category/[CATEGORY_ID]`.
 
 ## 🧠 Machine Learning Model
 
-The fake follower detection system uses a machine learning model hosted on FastAPI. It analyzes:
-- Username characteristics (length, digits).
-- Profile completeness (bio length, profile picture).
-- Following/follower ratios.
-- Posting frequency and patterns.
+# 🚨 Fake Followers Detection API
 
-The model returns a percentage score indicating the likelihood of fake followers in an account.
+This project provides a REST API that estimates the percentage of fake followers for Instagram profiles based solely on followers' metadata. It is built using **FastAPI**, a high-performance web framework for building APIs with Python.
 
 ---
+
+## 🔍 Overview
+
+Instagram users and influencers often attract fake followers—either bots or inactive accounts. This project uses machine learning and heuristics to detect such fake followers from profile and follower data.
+
+---
+
+## ⚙️ How It Works
+
+### 1. 📦 Data Collection
+- Follower metadata is gathered from Instagram-like sources via tools like **Apify** or scrapers.
+- Typical data per follower includes:
+  - `username`
+  - `followersCount`
+  - `followsCount`
+  - `postsCount`
+
+### 2. 🧠 Model (ML-based Classifier)
+- A machine learning model (e.g., RandomForestClassifier or XGBoost) was trained on a labeled dataset containing real and fake accounts.
+- The features used include:
+  - Number of posts
+  - Followers/following count
+  - Profile privacy
+  - Presence of a profile picture
+  - Bio length
+  - Username length and numeric patterns
+
+### 3. 🔗 API Endpoint
+- The trained model and/or heuristic logic is served using FastAPI.
+- The user sends a JSON of followers to the `/predict_fake_followers` endpoint.
+- The API processes the data and returns:
+  - Total followers analyzed
+  - Estimated fake follower percentage
+
+---
+
 
 ## 📈 Influence Score Calculation
 
@@ -153,14 +185,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 📞 Contact
-
-For questions or feedback:
-- Email: contact@influenceiq.com
-- Twitter: [@InfluenceIQ](https://twitter.com/InfluenceIQ)
-- Website: [www.influenceiq.com](https://www.influenceiq.com)
-
----
 
 This README provides everything needed for users and contributors to understand and use your project effectively while showcasing its capabilities in an interactive and professional manner!
 
@@ -172,19 +196,4 @@ Citations:
 [5] https://github.com/matiassingers/awesome-readme
 [6] https://tilburgsciencehub.com/topics/collaborate-share/share-your-work/content-creation/readme-best-practices/
 [7] https://github.com/abhisheknaiidu/awesome-github-profile-readme
-[8] https://github.com/othneildrew/Best-README-Template
-[9] https://www.linkedin.com/pulse/create-cool-github-profile-readmemd-muhammedh-shadir
-[10] https://gist.github.com/DomPizzie/7a5ff55ffa9081f2de27c315f5018afc
-[11] https://github.com/banesullivan/README
-[12] https://gprm.itsvg.in
-[13] https://www.readme-templates.com
-[14] https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
-[15] https://www.reddit.com/r/github/comments/uulygm/what_are_some_really_nice_github_profile_readmes/
-[16] https://github.com/durgeshsamariya/awesome-github-profile-readme-templates
-[17] https://github.com/jehna/readme-best-practices
-[18] https://www.youtube.com/watch?v=7FHiew0_NLQ
-[19] https://www.youtube.com/watch?v=rCt9DatF63I
-[20] https://dev.to/mfts/how-to-write-a-perfect-readme-for-your-github-project-59f2
 
----
-Answer from Perplexity: https://www.perplexity.ai/search/ansh-influence-ai-vK9Izg2oSi2tv5lrTg7lGA?utm_source=copy_output
