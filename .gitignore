@@ -8,3 +8,4 @@ aws_config.py
 __pycache__/main.cpython-313.pyc
 __pycache__/aws_config.cpython-313.pyc
 *.json
+apify_config.py
