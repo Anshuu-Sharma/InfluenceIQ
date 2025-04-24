@@ -9,7 +9,7 @@
 ## ✨ Features
 
 - **Profile Analytics**: Analyze follower count, following, posts, engagement rates, and more.
-- **Fake Follower Detection**: Powered by a custom machine learning model hosted on FastAPI. (under implementation feature!)
+- **Fake Follower Detection**: Powered by a custom machine learning model hosted on FastAPI. (under implementation!)
 - **Commenter Analysis**: Extract and analyze profiles of users commenting on posts.
 - **Network Visualization**: Interactive graphs showing follower relationships.
 - **Leaderboard**: Compare top influencers across categories.
