@@ -1,8 +1,7 @@
-# InfluenceIQ: Instagram Analytics & Fake Follower Detection
-
+# InfluenceIQ: Instagram Analytics
 ## 🚀 Overview
 
-**InfluenceIQ** is an advanced Instagram analytics platform that leverages machine learning to provide detailed insights into Instagram profiles. It helps influencers, brands, and marketers make data-driven decisions by analyzing engagement metrics, detecting fake followers, and visualizing network graphs.
+**InfluenceIQ** is an advanced Instagram analytics platform that provide detailed insights into Instagram profiles. It helps influencers, brands, and marketers make data-driven decisions by analyzing engagement metrics.
 
 ---
 
