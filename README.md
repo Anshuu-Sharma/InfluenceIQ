@@ -18,7 +18,6 @@
 
 - **Backend**: Flask (main app)
 - **Frontend**: HTML, CSS, JavaScript
-- **Machine Learning**: Scikit-learn
 - **Data Processing**: Pandas
 - **Visualization**: Matplotlib, NetworkX
 - **Database**: AWS DynamoDB
