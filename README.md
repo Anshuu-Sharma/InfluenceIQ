@@ -9,9 +9,7 @@
 ## ✨ Features
 
 - **Profile Analytics**: Analyze follower count, following, posts, engagement rates, and more.
-- **Fake Follower Detection**: Powered by a custom machine learning model hosted on FastAPI. (under implementation!)
 - **Commenter Analysis**: Extract and analyze profiles of users commenting on posts.
-- **Network Visualization**: Interactive graphs showing follower relationships.
 - **Leaderboard**: Compare top influencers across categories.
 - **Category Detection**: Automatic classification of accounts into niches like fashion, travel, tech, etc.
 
@@ -19,7 +17,7 @@
 
 ## 🛠️ Technology Stack
 
-- **Backend**: Flask (main app), FastAPI (ML model serving)
+- **Backend**: Flask (main app)
 - **Frontend**: HTML, CSS, JavaScript
 - **Machine Learning**: Scikit-learn
 - **Data Processing**: Pandas
@@ -50,14 +48,9 @@
 
 2. **Profile Analysis**:
    - Calculate engagement rates and influence scores.
-   - Detect fake followers using a FastAPI-hosted ML model.
 
-3. **Network Analysis**:
-   - Generate visual representations of follower relationships.
-
-4. **Commenter Analysis**:
+3. **Commenter Analysis**:
    - Extract usernames of commenters from posts.
-   - Analyze their profiles using machine learning.
 
 ---
 
@@ -96,8 +89,6 @@ python app.py
 3. View comprehensive analytics including:
    - Profile statistics (followers, following, posts).
    - Engagement metrics (likes/comments per post).
-   - Fake follower percentage (ML-powered detection).
-   - Network graph visualization.
 
 ### Leaderboard
 1. Navigate to `/leaderboard/view` to see top influencers.
@@ -115,50 +106,6 @@ Profiles are automatically categorized into niches:
 Access category-specific leaderboards via `/leaderboard/category/[CATEGORY_ID]`.
 
 ---
-
-## 🧠 Machine Learning Model
-
-# 🚨 Fake Followers Detection API
-
-This project provides a REST API that estimates the percentage of fake followers for Instagram profiles based solely on followers' metadata. It is built using **FastAPI**, a high-performance web framework for building APIs with Python.
-
----
-
-## 🔍 Overview
-
-Instagram users and influencers often attract fake followers—either bots or inactive accounts. This project uses machine learning and heuristics to detect such fake followers from profile and follower data.
-
----
-
-## ⚙️ How It Works
-
-### 1. 📦 Data Collection
-- Follower metadata is gathered from Instagram-like sources via tools like **Apify** or scrapers.
-- Typical data per follower includes:
-  - `username`
-  - `followersCount`
-  - `followsCount`
-  - `postsCount`
-
-### 2. 🧠 Model (ML-based Classifier)
-- A machine learning model (e.g., RandomForestClassifier or XGBoost) was trained on a labeled dataset containing real and fake accounts.
-- The features used include:
-  - Number of posts
-  - Followers/following count
-  - Profile privacy
-  - Presence of a profile picture
-  - Bio length
-  - Username length and numeric patterns
-
-### 3. 🔗 API Endpoint
-- The trained model and/or heuristic logic is served using FastAPI.
-- The user sends a JSON of followers to the `/predict_fake_followers` endpoint.
-- The API processes the data and returns:
-  - Total followers analyzed
-  - Estimated fake follower percentage
-
----
-
 
 ## 📈 Influence Score Calculation
 
@@ -187,16 +134,3 @@ Contributions are welcome! Follow these steps to contribute:
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-
-
-This README provides everything needed for users and contributors to understand and use your project effectively while showcasing its capabilities in an interactive and professional manner!
-
-Citations:
-[1] https://www.hatica.io/blog/best-practices-for-github-readme/
-[2] https://www.sitepoint.com/github-profile-readme/
-[3] https://everhour.com/blog/github-readme-template/
-[4] https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/
-[5] https://github.com/matiassingers/awesome-readme
-[6] https://tilburgsciencehub.com/topics/collaborate-share/share-your-work/content-creation/readme-best-practices/
-[7] https://github.com/abhisheknaiidu/awesome-github-profile-readme
-
