@@ -19,7 +19,6 @@
 - **Backend**: Flask (main app)
 - **Frontend**: HTML, CSS, JavaScript
 - **Data Processing**: Pandas
-- **Visualization**: Matplotlib, NetworkX
 - **Database**: AWS DynamoDB
 - **Cloud Storage**: AWS S3
 - **API Integration**: Apify for Instagram data scraping
